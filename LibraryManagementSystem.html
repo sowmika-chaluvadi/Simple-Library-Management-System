@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+   <html>
+   <head>
+   <script src='https://code.jquery.com/jquery-1.12.3.js'></script>
+   <script src='https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js'></script>
+   <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js" charset="utf-8"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.1.0/css/responsive.bootstrap.min.css">
+   
+ 
+
+    <script>
+      $(document).ready(function(){
+  $("#example").DataTable({
+    // "sPaginationType": "bootstrap",
+  });
+});
+    </script>
+   </head>
+   <body>
+<style>
+.pagination > li > a
+{
+    background-color: white;
+    color: #5A4181;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
+{
+    color: #5a5a5a;
+    background-color: #eee;
+    border-color: #ddd;
+}
+
+.pagination > .active > a
+{
+    color: white;
+    background-color: #5A4181 !Important;
+    border: solid 1px #5A4181 !Important;
+}
+
+.pagination > .active > a:hover
+{
+    background-color: #5A4181 !Important;
+    border: solid 1px #4b5131;
+}
+*{
+  margin:0;
+  padding:0;
+ }
+body{
+  background-image:url('https://img.freepik.com/premium-photo/book-stack-library-room-blurred-bookshelf-background_42691-514.jpg?w=2000');
+  background-size:cover;
+  background-position:contain;
+  top:0;
+  left:0;
+  right:0;
+  width:1536px;
+  height:100%
+  position:fixed;
+  text-color:white;
+}
+table,th,td{
+  position:center;
+  background-color:white;
+  border:1px solid black;
+  opacity:0.9;
+  padding:10px;
+  border-collapse:collapse;
+}
+tr{
+  text-align:center;
+}
+tr:hover {
+  background-color:powderblue;
+  filter:brightness(60%);
+}
+.center{
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:200px;
+  margin-bottom:100px;
+}
+.navbar-custom{
+	text-color:white;
+}
+
+</style>
+<h1 style="text-align:center;">Library Management System</h1>
+<br>
+<br>
+<br>
+<div class="background_image">
+    <table id="example" class="center" cellspacing="0" width="80%">
+    <thead>
+        <tr>
+            <th style="text-align: center;">Book Title</th>
+            <th style="text-align: center;">Author</th>
+            <th style="text-align: center;">Subject</th>
+            <th style="text-align: center;">Published Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Half Girlfriend</td>
+            <td>Chetan Bhagat</td>
+            <td>Love</td>
+            <td>03-03-2017</td>
+        </tr>
+        <tr>
+            <td>It Happens For a Reason</td>
+            <td>Preethi Shennoy</td>
+            <td>Drama</td>
+            <td>05-01-2018</td>
+        </tr>
+        <tr>
+            <td>Wings of Fire</td>
+            <td>Dr.Abdul Kalam</td>
+            <td>Auto Biography</td>
+			<td>22-10-2017</td>
+        </tr>
+        <tr>
+            <td>Wimpy Kid</td>
+            <td>Jeff Kenin</td>
+            <td>Comic</td>
+            <td>21-10-2022</td>
+        </tr>
+        <tr>
+            <td>Data Smart</td>
+            <td>John Foreman</td>
+            <td>data_science</td>
+            <td>03-03-2001</td>
+        </tr>
+        <tr>
+            <td>God Created the Integers</td>
+            <td>Stephen Hawking</td>
+            <td>mathematics</td>
+            <td>06-01-2002</td>
+        </tr>
+        <tr>
+            <td>Superfreakonomics</td>
+            <td>Stephen Dubner</td>
+            <td>economics</td>
+            <td>05-09-2004</td>
+        </tr>
+        <tr>
+            <td>Orientalism</td>
+            <td>Edward Said</td>
+            <td>history</td>
+            <td>05-05-2014</td>
+        </tr>
+        <tr>
+            <td>Nature of Statistical Learning Theory, The</td>
+            <td>Vladimir Vapnik</td>
+            <td>data_science</td>
+            <td>03-09-2014</td>
+        </tr>
+        <tr>
+            <td>Integration of the Indian States</td>
+            <td>V P Menon</td>
+            <td>history</td>
+            <td>02-03-2020</td>
+        </tr>
+        <tr>
+            <td>Drunkard's Walk, The</td>
+            <td>Leonard Mlodinow</td>
+            <td>science</td>
+            <td>30-10-2014</td>
+        </tr>
+        <tr>
+            <td>Image Processing & Mathematical Morphology</td>
+            <td>Frank Shih</td>
+            <td>signal_processing</td>
+            <td>02-02-2019</td>
+        </tr>
+        <tr>
+            <td>How to Think Like Sherlock Holmes</td>
+            <td>Maria Konnikova</td>
+            <td>psychology</td>
+            <td>03-06-2003</td>
+        </tr>
+        <tr>
+            <td>Data Scientists at Work</td>
+            <td>Sebastian Gutierrez</td>
+            <td>data_science</td>
+            <td>04-03-2007</td>
+        </tr>
+        <tr>
+            <td>Slaughterhouse Five</td>
+            <td>Vonnegut Kurt</td>
+            <td>fiction</td>
+            <td>01-09-2007</td>
+        </tr>
+        <tr>
+            <td>Birth of a Theorem</td>
+            <td>Villani Cedric</td>
+            <td>mathematics</td>
+            <td>06-06-2008</td>
+        </tr>
+        <tr>
+            <td>Structure & Interpretation of Computer Programs</td>
+            <td>Sussman Gerald</td>
+            <td>computer_science</td>
+            <td>06-04-2005</td>
+        </tr>
+        <tr>
+            <td>The Age of Wrath</td>
+            <td>Eraly Abraham</td>
+            <td>history</td>
+            <td>05-09-2011</td>
+        </tr>
+        <tr>
+            <td>The Trial</td>
+            <td>Kafka Frank</td>
+            <td>fiction</td>
+            <td>04-01-2013</td>
+        </tr>
+        <tr>
+            <td>Statistical Decision Theory'</td>
+            <td>Pratt John</td>
+            <td>data_science</td>
+            <td>03-05-2008</td>
+        </tr>
+        <tr>
+            <td>Water in The Well</td>
+            <td>Sudha Murthy</td>
+            <td>fiction</td>
+            <td>30-07-2005</td>
+        </tr>
+        <tr>
+            <td>Data Mining Handbook</td>
+            <td>Nisbet Robert</td>
+            <td>data_science</td>
+            <td>04-08-2001</td>
+        </tr>
+        <tr>
+            <td>New Machiavelli, The</td>
+            <td>Wells H. G</td>
+            <td>fiction</td>
+            <td>02-10-2009</td>
+        </tr>
+        <tr>
+            <td>Physics & Philosophy</td>
+            <td>Heisenberg Werner</td>
+            <td>science</td>
+            <td>02-03-2002</td>
+        </tr>
+        <tr>
+            <td>Machine Learning for Hackers</td>
+            <td>Conway Drew</td>
+            <td>data_science</td>
+            <td>04-07-2001</td>
+        </tr>
+        <tr>
+            <td>A Farewell to Arms</td>
+            <td>Hemingway Ernest</td>
+            <td>fiction</td>
+            <td>04-02-2006</td>
+        </tr>
+        <tr>
+            <td>Mein Kampf</td>
+            <td>Hitler Adolf</td>
+            <td>nonfiction</td>
+            <td>02-08-2003</td>
+        </tr>
+        <tr>
+            <td>Journal of a Novel</td>
+            <td>Steinbeck John</td>
+            <td>fiction</td>
+            <td>02-08-2003</td>
+        </tr>
+        <tr>
+            <td>In a Free State</td>
+            <td>Naipaul V. S</td>
+            <td>fiction</td>
+            <td>04-08-2007</td>
+        </tr>
+        <tr>
+            <td>Catch 22</td>
+            <td>Heller Joseph</td>
+            <td>fiction</td>
+            <td>20-08-2000</td>
+        </tr>
+        <tr>
+            <td>Data Structures Using C & C++</td>
+            <td>Tanenbaum Andrew</td>
+            <td>computer_science</td>
+            <td>03-07-2003</td>
+        </tr>
+        <tr>
+            <td>Principles of Communication Systems</td>
+            <td>Taub Schilling</td>
+            <td>computer_science</td>
+            <td>05-03-2010</td>
+        </tr>
+        <tr>
+            <td>Crime and Punishment</td>
+            <td>Dostoevsky Fyodor</td>
+            <td>fiction</td>
+            <td>27-09-2013</td>
+        </tr>
+        <tr>
+            <td>Sea of Poppies</td>
+            <td>Ghosh Amitav</td>
+            <td>fiction</td>
+            <td>22-10-2007</td>
+        </tr>
+        <tr>
+            <td>All the President's Men</td>
+            <td>Woodward Bob</td>
+            <td>history</td>
+            <td>04-06-2006</td>
+        </tr>
+        <tr>
+            <td>Scoop!</td>
+            <td>Nayar Kuldip</td>
+            <td>history</td>
+            <td>04-07-2004</td>
+        </tr>
+        <tr>
+            <td>Aghal Paghal</td>
+            <td>Deshpande P L</td>
+            <td>nonfiction</td>
+            <td>05-10-2001</td>
+        </tr>
+        <tr>
+            <td>Manasa</td>
+            <td>Kale VP</td>
+            <td>nonfiction</td>
+            <td>04-01-2015</td>
+        </tr>
+        <tr>
+            <td>India from Midnight to Milennium</td>
+            <td>Tharoor Shasri</td>
+            <td>hsitory</td>
+            <td>06-02-2009</td>
+        </tr>
+        <tr>
+            <td>On Education</td>
+            <td>Russell Bertrand</td>
+            <td>Philosophy</td>
+            <td>03-07-2008</td>
+        </tr>
+        <tr>
+            <td>The Theory of Everything</td>
+            <td>Stephen Hawking</td>
+            <td>science</td>
+            <td>06-05-2005</td>
+        </tr>
+        <tr>
+            <td>Identity & Violence</td>
+            <td>Amartya Sen</td>
+            <td>Philosophy</td>
+            <td>06-04-2016</td>
+        </tr>
+        <tr>
+            <td>Two States</td>
+            <td>Chetan Bhagat</td>
+            <td>Love</td>
+            <td>03-08-2017</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</body>
+</html>
